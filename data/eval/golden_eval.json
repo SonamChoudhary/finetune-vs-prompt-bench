@@ -1,0 +1,3239 @@
+[
+  {
+    "id": 47052,
+    "query": "What is the minimum element in the rotated sorted array [7, 8, 9, 1, 2, 3]?",
+    "tools": [
+      {
+        "name": "find_minimum_rotated_sorted_array",
+        "description": "Finds the minimum element in a rotated sorted array.",
+        "parameters": {
+          "nums": {
+            "description": "The rotated sorted array.",
+            "type": "List[int]"
+          }
+        }
+      },
+      {
+        "name": "find_longest_palindromic_substring",
+        "description": "Finds the longest palindromic substring in a string.",
+        "parameters": {
+          "s": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "triangle_area",
+        "description": "Computes the area of a triangle given its base and height.",
+        "parameters": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "float"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "float"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "find_minimum_rotated_sorted_array",
+        "arguments": {
+          "nums": [
+            7,
+            8,
+            9,
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 39815,
+    "query": "What are the top 100 companies related to the SIC code 2411 and can you also analyze the on-page SEO of the website 'example.com'?",
+    "tools": [
+      {
+        "name": "get_companies_by_sic_code",
+        "description": "Retrieve a list of the top 100 companies related to a specified SIC code using the Toolbench RapidAPI service.",
+        "parameters": {
+          "sic_code": {
+            "description": "The Standard Industrial Classification (SIC) code used to lookup companies.",
+            "type": "int",
+            "default": "7374"
+          }
+        }
+      },
+      {
+        "name": "onpage_seo_analyze",
+        "description": "Analyzes on-page SEO for a given website using the Toolbench RapidAPI service.",
+        "parameters": {
+          "website": {
+            "description": "The URL of the website to be analyzed.",
+            "type": "str",
+            "default": "getecz.com"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "get_companies_by_sic_code",
+        "arguments": {
+          "sic_code": 2411
+        }
+      },
+      {
+        "name": "onpage_seo_analyze",
+        "arguments": {
+          "website": "example.com"
+        }
+      }
+    ]
+  },
+  {
+    "id": 12734,
+    "query": "What are the locations of the IP addresses that commonly appear in spam emails?",
+    "tools": [
+      {
+        "name": "get_geo_location_of_ip_address",
+        "description": "Retrieve the geographical location and other details of a given IP address using the Toolbench RapidAPI.",
+        "parameters": {
+          "ip": {
+            "description": "The IPV4 address for which geographical information is to be retrieved.",
+            "type": "str",
+            "default": "34.89.89.28"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "get_geo_location_of_ip_address",
+        "arguments": {
+          "ip": "103.76.104.100"
+        }
+      },
+      {
+        "name": "get_geo_location_of_ip_address",
+        "arguments": {
+          "ip": "104.28.29.100"
+        }
+      }
+    ]
+  },
+  {
+    "id": 47723,
+    "query": "Fetch a random mlem image with the minimum width set to 600 pixels, the minimum height set to 400 pixels, and the orientation set to 'landscape'.",
+    "tools": [
+      {
+        "name": "profile_image",
+        "description": "Generates a profile image URL based on the provided user name and retrieves the image information from the RapidAPI image service.",
+        "parameters": {
+          "name": {
+            "description": "The user's name or any other text to generate the profile image URL.",
+            "type": "str",
+            "default": ""
+          }
+        }
+      },
+      {
+        "name": "random_mlem",
+        "description": "Fetches one random mlem image in JSON format based on the given optional parameters.",
+        "parameters": {
+          "brightness": {
+            "description": "Image brightness, can be 'dark' or 'bright'.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "maxheight": {
+            "description": "Maximum height of the image.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "minwidth": {
+            "description": "Minimum width of the image.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "minheight": {
+            "description": "Minimum height of the image.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "tag": {
+            "description": "Tag to filter the mlem images.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "maxwidth": {
+            "description": "Maximum width of the image.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "orientation": {
+            "description": "Orientation of the image, can be 'square', 'landscape', or 'portrait'.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      },
+      {
+        "name": "video_search",
+        "description": "Search for videos based on the specified criteria and return the list of matching videos.",
+        "parameters": {
+          "query": {
+            "description": "The search term to be used for finding videos.",
+            "type": "str",
+            "default": "amateur"
+          },
+          "site": {
+            "description": "The specific site to search for videos. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "timeout": {
+            "description": "Timeout duration in milliseconds for the request. Defaults to 5000.",
+            "type": "int, optional",
+            "default": "5000"
+          },
+          "page": {
+            "description": "The page number for pagination. Defaults to 1.",
+            "type": "int, optional",
+            "default": "1"
+          },
+          "filter": {
+            "description": "Filter criteria for the search results. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "quality": {
+            "description": "Minimum quality of the videos to be searched. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "random_mlem",
+        "arguments": {
+          "minwidth": 600,
+          "minheight": 400,
+          "orientation": "landscape"
+        }
+      }
+    ]
+  },
+  {
+    "id": 13275,
+    "query": "Scrape 15 links from the URL 'https://www.example.com' and include query parameters.",
+    "tools": [
+      {
+        "name": "scrape_links",
+        "description": "Scrapes a specified number of links from the provided URL using the Scrapey Link Scraper API.",
+        "parameters": {
+          "url": {
+            "description": "The target URL from which to scrape links.",
+            "type": "str",
+            "default": "amazon.com"
+          },
+          "maxlinks": {
+            "description": "The maximum number of links to scrape. Defaults to 10.",
+            "type": "int, optional",
+            "default": "10"
+          },
+          "includequery": {
+            "description": "Whether to include query parameters in the links. Defaults to None.",
+            "type": "bool, optional",
+            "default": "true"
+          }
+        }
+      },
+      {
+        "name": "photo_from_given_number",
+        "description": "Searches for a photo on the internet using the provided phone number and returns the photo in bytes if a match is found.",
+        "parameters": {
+          "phone": {
+            "description": "The phone number to search for.",
+            "type": "str",
+            "default": "+79999999999"
+          }
+        }
+      },
+      {
+        "name": "convert_from_one_unit_to_another",
+        "description": "Converts a given quantity from one unit to another using the RapidAPI measurement unit converter.",
+        "parameters": {
+          "to": {
+            "description": "The target unit for conversion. Can be specified in abbreviation, singular, or plural forms (e.g., 'km', 'kilometer', 'kilometers').",
+            "type": "str",
+            "default": "km"
+          },
+          "is_from": {
+            "description": "The source unit for conversion. Can be specified in abbreviation, singular, or plural forms (e.g., 'm', 'meter', 'meters').",
+            "type": "str",
+            "default": "m"
+          },
+          "value": {
+            "description": "The numeric value to be converted.",
+            "type": "int",
+            "default": "1200"
+          },
+          "measure": {
+            "description": "The type of measurement (e.g., 'length', 'mass').",
+            "type": "str",
+            "default": "length"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "scrape_links",
+        "arguments": {
+          "url": "https://www.example.com",
+          "maxlinks": 15,
+          "includequery": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 35447,
+    "query": "Find all constructors who participated in the final race of the 2020 Formula 1 season.",
+    "tools": [
+      {
+        "name": "listofallconstructorswithinaraceinayear",
+        "description": "Fetches a list of all constructors for a specific race (round) within a given season (year).",
+        "parameters": {
+          "year": {
+            "description": "The year of the Formula 1 season.",
+            "type": "str",
+            "default": "year"
+          },
+          "round": {
+            "description": "The specific race (round) within the season.",
+            "type": "str",
+            "default": "round"
+          }
+        }
+      },
+      {
+        "name": "search",
+        "description": "This function searches for American Football players, teams, and tournaments using the provided search term.",
+        "parameters": {
+          "term": {
+            "description": "The search term to use when searching for American Football players, teams, and tournaments.",
+            "type": "str",
+            "default": "brady"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "listofallconstructorswithinaraceinayear",
+        "arguments": {
+          "year": "2020",
+          "round": "17"
+        }
+      }
+    ]
+  },
+  {
+    "id": 31717,
+    "query": "Generate a random password of length 10 with uppercase, lowercase, digits, but no special characters.",
+    "tools": [
+      {
+        "name": "flatten_list",
+        "description": "Flattens a nested list into a single-level list.",
+        "parameters": {
+          "nested_list": {
+            "description": "The nested list to be flattened.",
+            "type": "List"
+          }
+        }
+      },
+      {
+        "name": "generate_random_string",
+        "description": "Generates a random string of specified length and character types.",
+        "parameters": {
+          "length": {
+            "description": "The length of the random string.",
+            "type": "int",
+            "default": true
+          },
+          "uppercase": {
+            "description": "Include uppercase letters. Defaults to True.",
+            "type": "bool, optional",
+            "default": true
+          },
+          "lowercase": {
+            "description": "Include lowercase letters. Defaults to True.",
+            "type": "bool, optional",
+            "default": true
+          },
+          "digits": {
+            "description": "Include digits. Defaults to True.",
+            "type": "bool, optional"
+          },
+          "special_chars": {
+            "description": "Include special characters. Defaults to False.",
+            "type": "bool, optional",
+            "default": true
+          }
+        }
+      },
+      {
+        "name": "is_palindrome",
+        "description": "Checks if a string is a palindrome.",
+        "parameters": {
+          "text": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "find_missing_ranges",
+        "description": "Finds the missing ranges between lower and upper in a sorted list of integers.",
+        "parameters": {
+          "nums": {
+            "description": "The sorted list of integers.",
+            "type": "List[int]"
+          },
+          "lower": {
+            "description": "The lower bound.",
+            "type": "int"
+          },
+          "upper": {
+            "description": "The upper bound.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "find_missing_number",
+        "description": "Finds the missing number in a list of integers from 0 to n.",
+        "parameters": {
+          "nums": {
+            "description": "The list of integers.",
+            "type": "List[int]"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "generate_random_string",
+        "arguments": {
+          "length": 10,
+          "uppercase": true,
+          "lowercase": true,
+          "digits": true,
+          "special_chars": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 24413,
+    "query": "I need to access Power BI learning resources from page 5. Can you fetch that for me?",
+    "tools": [
+      {
+        "name": "consulta_estabelecimento",
+        "description": "Queries the CNPJ for unified information from Receita Federal, Simples Nacional, and Cadastro de Contribuintes.",
+        "parameters": {
+          "cnpj": {
+            "description": "The CNPJ number to be queried.",
+            "type": "str",
+            "default": "84447804000123"
+          },
+          "maxage": {
+            "description": "Maximum age of the cached data in days. Defaults to 30.",
+            "type": "int, optional",
+            "default": "30"
+          },
+          "simpleshistory": {
+            "description": "Whether to include historical data from Simples Nacional. Defaults to None.",
+            "type": "bool, optional",
+            "default": "false"
+          },
+          "registrations": {
+            "description": "UFs separated by commas to include information from Cadastro de Contribuintes. Use 'BR' to consider all. Defaults to 'BR'.",
+            "type": "str, optional",
+            "default": "BR"
+          },
+          "simples": {
+            "description": "Whether to include current data from Simples Nacional. Defaults to None.",
+            "type": "bool, optional",
+            "default": "true"
+          }
+        }
+      },
+      {
+        "name": "getlearningresources",
+        "description": "Fetches Power BI learning resources from a specified page using the RapidAPI key.",
+        "parameters": {
+          "page": {
+            "description": "The page number of the learning resources to fetch.",
+            "type": "int",
+            "default": "1"
+          }
+        }
+      },
+      {
+        "name": "search_countries_by_continent",
+        "description": "Search for countries by their continent using the specified query parameters.",
+        "parameters": {
+          "continent": {
+            "description": "The continent of the countries to search for. This search is case insensitive and requires an exact match.",
+            "type": "str",
+            "default": "North America"
+          },
+          "offset": {
+            "description": "The zero-indexed page number from which the search should continue. Defaults to 0.",
+            "type": "int, optional",
+            "default": 0
+          },
+          "fields": {
+            "description": "A comma-separated list of fields to filter the response. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "limit": {
+            "description": "The maximum number of records to return per page. Defaults to 10.",
+            "type": "int, optional",
+            "default": 10
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "getlearningresources",
+        "arguments": {
+          "page": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": 7455,
+    "query": "I have a list of random items [1, 'dog', 2, 'cat', 'dog', 1, 2, 'cat', 'cat', 1]. How often does each item show up?",
+    "tools": [
+      {
+        "name": "count_occurrences",
+        "description": "Counts the occurrences of each element in a list and returns a dictionary with the counts.",
+        "parameters": {
+          "lst": {
+            "description": "The input list.",
+            "type": "List"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "count_occurrences",
+        "arguments": {
+          "lst": [
+            1,
+            "dog",
+            2,
+            "cat",
+            "dog",
+            1,
+            2,
+            "cat",
+            "cat",
+            1
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 50927,
+    "query": "Fetch the recommendations for experiments 567, 890, and 234, and include the reasoning process for each request.",
+    "tools": [
+      {
+        "name": "recommend",
+        "description": "Fetches a recommendation for a given experiment ID using the Toolbench RapidAPI service.",
+        "parameters": {
+          "experiment_id": {
+            "description": "The ID of the experiment for which to fetch recommendations.",
+            "type": "int",
+            "default": "12234"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "recommend",
+        "arguments": {
+          "experiment_id": 567
+        }
+      },
+      {
+        "name": "recommend",
+        "arguments": {
+          "experiment_id": 890
+        }
+      },
+      {
+        "name": "recommend",
+        "arguments": {
+          "experiment_id": 234
+        }
+      }
+    ]
+  },
+  {
+    "id": 39095,
+    "query": "Fetch the first 100 countries in ascending order.",
+    "tools": [
+      {
+        "name": "getallcountry",
+        "description": "Fetches the list of country names via an API based on the provided query parameters.",
+        "parameters": {
+          "limit": {
+            "description": "The maximum number of items per page. Default is 500.",
+            "type": "int, optional",
+            "default": "500"
+          },
+          "page": {
+            "description": "The page number to retrieve. Default is 1.",
+            "type": "int, optional",
+            "default": "1"
+          },
+          "order": {
+            "description": "The order in which to sort results. Accepts 'ASC' for ascending or 'DESC' for descending. Default is 'ASC'.",
+            "type": "str, optional",
+            "default": "ASC"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "getallcountry",
+        "arguments": {
+          "limit": 100,
+          "page": 1,
+          "order": "ASC"
+        }
+      }
+    ]
+  },
+  {
+    "id": 24180,
+    "query": "What events are scheduled for basketball on March 30, 2023?",
+    "tools": [
+      {
+        "name": "team_recent_form",
+        "description": "Fetches and returns the recent form of a sports team using the given team ID.",
+        "parameters": {
+          "team_id": {
+            "description": "The ID of the team for which the recent form is to be retrieved.",
+            "type": "int",
+            "default": "2817"
+          }
+        }
+      },
+      {
+        "name": "matchdetails",
+        "description": "Retrieve handball match details by match ID.",
+        "parameters": {
+          "is_id": {
+            "description": "The ID of the match to retrieve information for.",
+            "type": "int",
+            "default": 10485769
+          }
+        }
+      },
+      {
+        "name": "schedule_by_date",
+        "description": "Fetches the event schedule for a given date and sport ID using the specified API key.",
+        "parameters": {
+          "date": {
+            "description": "The date for which the event schedule is requested, in 'YYYY-MM-DD' format.",
+            "type": "str",
+            "default": "2022-05-11"
+          },
+          "sport_id": {
+            "description": "The ID of the sport for which the schedule is requested.",
+            "type": "int",
+            "default": "1"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "schedule_by_date",
+        "arguments": {
+          "date": "2023-03-30",
+          "sport_id": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": 11704,
+    "query": "What is the word frequency in the text 'Hello world, hello universe, world'?",
+    "tools": [
+      {
+        "name": "fibonacci",
+        "description": "Calculates the nth Fibonacci number.",
+        "parameters": {
+          "n": {
+            "description": "The position of the Fibonacci number.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "is_anagram_phrase",
+        "description": "Checks if two phrases are anagrams of each other, ignoring whitespace and punctuation.",
+        "parameters": {
+          "phrase1": {
+            "description": "The first phrase.",
+            "type": "str"
+          },
+          "phrase2": {
+            "description": "The second phrase.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "merge_dictionaries",
+        "description": "Merges two dictionaries into a single dictionary.",
+        "parameters": {
+          "dict1": {
+            "description": "The first dictionary.",
+            "type": "Dict"
+          },
+          "dict2": {
+            "description": "The second dictionary.",
+            "type": "Dict"
+          }
+        }
+      },
+      {
+        "name": "calculate_grade",
+        "description": "Calculates the weighted average grade based on scores and their corresponding weights.",
+        "parameters": {
+          "scores": {
+            "description": "A list of scores.",
+            "type": "List[float]"
+          },
+          "weights": {
+            "description": "A list of weights corresponding to each score.",
+            "type": "List[float]"
+          }
+        }
+      },
+      {
+        "name": "word_frequency",
+        "description": "Calculates the frequency of each word in a text.",
+        "parameters": {
+          "text": {
+            "description": "The input text.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "is_palindrome",
+        "description": "Checks if a string is a palindrome.",
+        "parameters": {
+          "text": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "find_missing_ranges",
+        "description": "Finds the missing ranges between lower and upper in a sorted list of integers.",
+        "parameters": {
+          "nums": {
+            "description": "The sorted list of integers.",
+            "type": "List[int]"
+          },
+          "lower": {
+            "description": "The lower bound.",
+            "type": "int"
+          },
+          "upper": {
+            "description": "The upper bound.",
+            "type": "int"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "word_frequency",
+        "arguments": {
+          "text": "Hello world, hello universe, world"
+        }
+      }
+    ]
+  },
+  {
+    "id": 33967,
+    "query": "Determine if 'icloud.com' is a disposable domain. Additionally, check the disposability of 'getnada.com' and 'throwawaymail.com'.",
+    "tools": [
+      {
+        "name": "domain",
+        "description": "Checks if a given domain is disposable using the Mailcheck API.",
+        "parameters": {
+          "domain": {
+            "description": "The domain to check for disposability.",
+            "type": "str",
+            "default": "example.com"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "domain",
+        "arguments": {
+          "domain": "icloud.com"
+        }
+      },
+      {
+        "name": "domain",
+        "arguments": {
+          "domain": "getnada.com"
+        }
+      },
+      {
+        "name": "domain",
+        "arguments": {
+          "domain": "throwawaymail.com"
+        }
+      }
+    ]
+  },
+  {
+    "id": 12998,
+    "query": "I need to find the least common multiple of 24 and 36 for my math homework, can you help?",
+    "tools": [
+      {
+        "name": "least_common_multiple",
+        "description": "Computes the least common multiple (LCM) of two positive integers.",
+        "parameters": {
+          "a": {
+            "description": "The first positive integer.",
+            "type": "int"
+          },
+          "b": {
+            "description": "The second positive integer.",
+            "type": "int"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "least_common_multiple",
+        "arguments": {
+          "a": 24,
+          "b": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": 10041,
+    "query": "I want to see all the country names from the radio API, but only the first 200 and from the second page, please.",
+    "tools": [
+      {
+        "name": "all_songs_from_artist",
+        "description": "Retrieves all songs by the specified artist using the Toolbench RapidAPI service.",
+        "parameters": {
+          "artist": {
+            "description": "The name of the artist whose songs are to be retrieved.",
+            "type": "str",
+            "default": "Halsey"
+          }
+        }
+      },
+      {
+        "name": "getallcountry",
+        "description": "Fetches the list of country names via an API based on the provided query parameters.",
+        "parameters": {
+          "limit": {
+            "description": "The maximum number of items per page. Default is 500.",
+            "type": "int, optional",
+            "default": "500"
+          },
+          "page": {
+            "description": "The page number to retrieve. Default is 1.",
+            "type": "int, optional",
+            "default": "1"
+          },
+          "order": {
+            "description": "The order in which to sort results. Accepts 'ASC' for ascending or 'DESC' for descending. Default is 'ASC'.",
+            "type": "str, optional",
+            "default": "ASC"
+          }
+        }
+      },
+      {
+        "name": "new_releases",
+        "description": "Retrieves new music releases from Spotify based on the given country code.",
+        "parameters": {
+          "country": {
+            "description": "The country code to fetch new releases for. Example values include 'US', 'CA', 'SE', 'IN', 'UK'.",
+            "type": "str",
+            "default": "us"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "getallcountry",
+        "arguments": {
+          "limit": 200,
+          "page": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": 49211,
+    "query": "Fetch the prematch list from the Sports Betting API for sport ID 1, language code 'en', and league ID 50.",
+    "tools": [
+      {
+        "name": "teams_affiliates_teamids",
+        "description": "Query baseball team affiliates by team ID using the RapidAPI service.",
+        "parameters": {
+          "teamids": {
+            "description": "A comma-separated string of team IDs to query. Default is '145'.",
+            "type": "str",
+            "default": "145"
+          }
+        }
+      },
+      {
+        "name": "get_all_predictions",
+        "description": "Fetches all betting tips from the API with configurable parameters for connection, content type, sorting, and API key.",
+        "parameters": {
+          "connection": {
+            "description": "Specifies the connection type for the API request. Default is 'keep-alive'.",
+            "type": "str",
+            "default": "keep-alive"
+          },
+          "content_type": {
+            "description": "Sets the content type for the API request. Default is 'application/json'.",
+            "type": "str",
+            "default": "application/json"
+          },
+          "sort": {
+            "description": "Criterion for sorting the betting tips. Default is '-id' for descending order.",
+            "type": "str",
+            "default": "-id"
+          }
+        }
+      },
+      {
+        "name": "tournament_fixture",
+        "description": "Retrieves the full match list for a specified tournament, including half-time and final scores, and additional information such as referee and stadium.",
+        "parameters": {
+          "tournamentid": {
+            "description": "The id of the tournament for which to retrieve the fixture information.",
+            "type": "int",
+            "default": "14"
+          }
+        }
+      },
+      {
+        "name": "prematch",
+        "description": "Fetches the prematch list from the Sports Betting API.",
+        "parameters": {
+          "sp": {
+            "description": "The sport ID.",
+            "type": "int",
+            "default": ""
+          },
+          "lang": {
+            "description": "The language code.",
+            "type": "str",
+            "default": "en"
+          },
+          "lid": {
+            "description": "The league ID.",
+            "type": "int",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "prematch",
+        "arguments": {
+          "sp": 1,
+          "lang": "en",
+          "lid": 50
+        }
+      }
+    ]
+  },
+  {
+    "id": 48726,
+    "query": "Is the string 'A man a plan a canal Panama' a valid palindrome? What is the standard deviation of the numbers [1, 2, 3, 4, 5]? What is the resistance of a 10-meter copper wire with a cross-sectional area of 0.0001 square meters? What is the cosine similarity of the vectors [1, 2, 3] and [4, 5, 6]?",
+    "tools": [
+      {
+        "name": "is_valid_palindrome",
+        "description": "Checks if a string is a valid palindrome, considering only alphanumeric characters and ignoring case.",
+        "parameters": {
+          "s": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "calculate_standard_deviation",
+        "description": "Calculates the standard deviation of a list of numbers.",
+        "parameters": {
+          "numbers": {
+            "description": "The list of numbers.",
+            "type": "List[Union[int, float]]"
+          }
+        }
+      },
+      {
+        "name": "wire_resistance",
+        "description": "Calculates the resistance of a wire based on its length, cross-sectional area, and material resistivity.",
+        "parameters": {
+          "length_m": {
+            "description": "The length of the wire in meters.",
+            "type": "int",
+            "default": "copper"
+          },
+          "area_sq_m": {
+            "description": "The cross-sectional area of the wire in square meters.",
+            "type": "float",
+            "default": "copper"
+          },
+          "material": {
+            "description": "The material of the wire. Allowed values: \"copper\" (default) or \"aluminum\".",
+            "type": "str, optional"
+          }
+        }
+      },
+      {
+        "name": "cosine_similarity",
+        "description": "Calculates the cosine similarity between two vectors.",
+        "parameters": {
+          "vector_a": {
+            "description": "The first vector.",
+            "type": "List[float]"
+          },
+          "vector_b": {
+            "description": "The second vector.",
+            "type": "List[float]"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "is_valid_palindrome",
+        "arguments": {
+          "s": "A man a plan a canal Panama"
+        }
+      },
+      {
+        "name": "calculate_standard_deviation",
+        "arguments": {
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      },
+      {
+        "name": "wire_resistance",
+        "arguments": {
+          "length_m": 10,
+          "area_sq_m": 0.0001
+        }
+      },
+      {
+        "name": "cosine_similarity",
+        "arguments": {
+          "vector_a": [
+            1,
+            2,
+            3
+          ],
+          "vector_b": [
+            4,
+            5,
+            6
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 43217,
+    "query": "Validate the VAT number 'DE987654321' and get the details of the domain 'example.asso.nc'.",
+    "tools": [
+      {
+        "name": "schools_list",
+        "description": "Fetches a list of schools around a specified geographical location.",
+        "parameters": {
+          "lat": {
+            "description": "The latitude of the geographical location.",
+            "type": "int",
+            "default": "-37.79870933"
+          },
+          "lon": {
+            "description": "The longitude of the geographical location.",
+            "type": "str",
+            "default": "144.95324086"
+          }
+        }
+      },
+      {
+        "name": "get_device_asset_by_identifier",
+        "description": "Fetches device asset information using a specified identifier from an external system via RapidAPI.",
+        "parameters": {
+          "identifier": {
+            "description": "The unique identifier for the device asset.",
+            "type": "str",
+            "default": "71491234-A"
+          }
+        }
+      },
+      {
+        "name": "check_1_param",
+        "description": "This function checks the validity of a given VAT number using the RapidAPI service.",
+        "parameters": {
+          "vat": {
+            "description": "The VAT number to be checked, including the country code.",
+            "type": "str",
+            "default": "SK2121316722"
+          }
+        }
+      },
+      {
+        "name": "get_domaine",
+        "description": "Retrieves the details of a domain using an API, specific to domains registered in New Caledonia.",
+        "parameters": {
+          "ext": {
+            "description": "The domain extension, which can be one of the following:",
+            "type": "str",
+            "default": "NC"
+          },
+          "nom": {
+            "description": "The domain name to look up.",
+            "type": "str",
+            "default": "1012"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "check_1_param",
+        "arguments": {
+          "vat": "DE987654321"
+        }
+      },
+      {
+        "name": "get_domaine",
+        "arguments": {
+          "ext": "asso.nc",
+          "nom": "example"
+        }
+      }
+    ]
+  },
+  {
+    "id": 59682,
+    "query": "Can you list the cryptocurrency exchanges and get insider holder information for Apple Inc.?",
+    "tools": [
+      {
+        "name": "crypto_exchanges",
+        "description": "Fetches the list of cryptocurrency exchanges available at Twelve Data API.",
+        "parameters": {
+          "format": {
+            "description": "The desired response format. Acceptable values are 'json' (default) and 'csv'.",
+            "type": "str",
+            "default": "json"
+          }
+        }
+      },
+      {
+        "name": "stock_insider_holders_stock",
+        "description": "Fetches insider holders' information for a given stock symbol using the mboum-finance API.",
+        "parameters": {
+          "symbol": {
+            "description": "The stock symbol for which to fetch insider holders' information.",
+            "type": "str",
+            "default": "AAPL"
+          }
+        }
+      },
+      {
+        "name": "stochrsi",
+        "description": "Fetches the Stochastic Relative Strength Index (STOCHRSI) for a given financial instrument using the Twelve Data API.",
+        "parameters": {
+          "symbol": {
+            "description": "The instrument symbol, which can be an equity, index, ETF, forex, or cryptocurrency (e.g., `AAPL`, `EUR/USD`, `ETH/BTC`).",
+            "type": "str",
+            "default": "AAPL"
+          },
+          "interval": {
+            "description": "The interval between two consecutive points in the time series. Supported values include `1min`, `5min`, `15min`, `30min`, `45min`, `1h`, `2h`, `4h`, `1day`, `1week`, `1month`.",
+            "type": "str",
+            "default": "1min"
+          },
+          "fast_dma_type": {
+            "description": "The type of moving average used for smoothing. Supported values are `SMA`, `EMA`, `WMA`, `DEMA`, `TEMA`, `TRIMA`, `KAMA`, `MAMA`, `T3MA`. Defaults to `SMA`.",
+            "type": "str",
+            "default": "SMA"
+          },
+          "series_type": {
+            "description": "The type of series data. Supported values are `open`, `high`, `low`, `close`. Defaults to `close`.",
+            "type": "str",
+            "default": "close"
+          },
+          "fast_d_period": {
+            "description": "The period for the fast D moving average. Defaults to 3.",
+            "type": "int",
+            "default": 3
+          },
+          "outputsize": {
+            "description": "The number of data points to return. Defaults to 30.",
+            "type": "int",
+            "default": 30
+          },
+          "fast_k_period": {
+            "description": "The period for the fast K moving average. Defaults to 3.",
+            "type": "int",
+            "default": 3
+          },
+          "format": {
+            "description": "The output format of the API response. Supported values are `json` and `csv`. Defaults to `json`.",
+            "type": "str",
+            "default": "json"
+          },
+          "time_period": {
+            "description": "The period for the RSI calculation. Defaults to 14.",
+            "type": "int",
+            "default": 14
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "crypto_exchanges",
+        "arguments": {}
+      },
+      {
+        "name": "stock_insider_holders_stock",
+        "arguments": {
+          "symbol": "AAPL"
+        }
+      }
+    ]
+  },
+  {
+    "id": 48964,
+    "query": "What are the details for the product with ID 123456?",
+    "tools": [
+      {
+        "name": "get_product",
+        "description": "Fetches product details from the RapidAPI endpoint using the given product ID.",
+        "parameters": {
+          "is_id": {
+            "description": "The ID of the product to fetch details for.",
+            "type": "int",
+            "default": ""
+          }
+        }
+      },
+      {
+        "name": "my_images_by_id",
+        "description": "Fetches generated images' information filtered by a unique ID.",
+        "parameters": {
+          "uniqueid": {
+            "description": "The unique ID used to filter the generated images.",
+            "type": "str",
+            "default": ""
+          }
+        }
+      },
+      {
+        "name": "get_job_by_task_id",
+        "description": "Fetches the job and action job status associated with the given task ID from the MidJourney API.",
+        "parameters": {
+          "task_id": {
+            "description": "The unique identifier for the task. This ID will expire 24 hours after its creation.",
+            "type": "str",
+            "default": "6ddd8121-2ae4-af61-b73d-eaefc8318d09"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "get_product",
+        "arguments": {
+          "is_id": 123456
+        }
+      }
+    ]
+  },
+  {
+    "id": 7303,
+    "query": "Can you find all pairs of numbers in the list [3, 5, 7, 10, 12] that sum up to 15, and calculate the bacterial population if the initial population is 1000, growth rate is 0.05, and time is 30 minutes?",
+    "tools": [
+      {
+        "name": "find_pairs_with_sum",
+        "description": "Finds all pairs of integers in a list that sum up to a target value.",
+        "parameters": {
+          "nums": {
+            "description": "The list of integers.",
+            "type": "List[int]"
+          },
+          "target": {
+            "description": "The target sum value.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "bacterial_growth",
+        "description": "Calculates the bacterial population after a given time based on the initial population and growth rate.",
+        "parameters": {
+          "initial_population": {
+            "description": "The initial bacterial population.",
+            "type": "int",
+            "default": 20
+          },
+          "growth_rate": {
+            "description": "The growth rate per unit time.",
+            "type": "float",
+            "default": 20
+          },
+          "time": {
+            "description": "The time elapsed.",
+            "type": "float"
+          },
+          "doubling_time": {
+            "description": "The doubling time of the bacteria in minutes. Defaults to 20.",
+            "type": "float, optional"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "find_pairs_with_sum",
+        "arguments": {
+          "nums": [
+            3,
+            5,
+            7,
+            10,
+            12
+          ],
+          "target": 15
+        }
+      },
+      {
+        "name": "bacterial_growth",
+        "arguments": {
+          "initial_population": 1000,
+          "growth_rate": 0.05,
+          "time": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": 38431,
+    "query": "Find TLE data for the satellite named 'NOAA 15'.",
+    "tools": [
+      {
+        "name": "collection",
+        "description": "Fetches TLE (Two-Line Element) data from the TLE API based on the specified search query.",
+        "parameters": {
+          "search": {
+            "description": "The search term to query the API. Defaults to 'ISS'.",
+            "type": "str",
+            "default": "ISS"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "collection",
+        "arguments": {
+          "search": "NOAA 15"
+        }
+      }
+    ]
+  },
+  {
+    "id": 14658,
+    "query": "Can you find car models from the year 2010 for the make 'Toyota' and limit the results to 10?",
+    "tools": [
+      {
+        "name": "models",
+        "description": "Search for car models based on various criteria such as year, make, model, make_id, and more. The results can be customized using different parameters to limit, sort, and filter the data.",
+        "parameters": {
+          "limit": {
+            "description": "The maximum number of results to return.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "make_id": {
+            "description": "The ID of the car make to filter the results.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "year": {
+            "description": "The year to filter the car models.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "page": {
+            "description": "The page number for paginated results.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "sort": {
+            "description": "The field to sort the results by. Default is 'id'.",
+            "type": "str, optional",
+            "default": "id"
+          },
+          "make": {
+            "description": "The car make to filter the results.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "model": {
+            "description": "The car model to filter the results.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "direction": {
+            "description": "The direction for sorting ('asc' or 'desc'). Default is 'asc'.",
+            "type": "str, optional",
+            "default": "asc"
+          },
+          "verbose": {
+            "description": "Whether to include detailed information like make, model, and trim. Default is 'yes'.",
+            "type": "str, optional",
+            "default": "yes"
+          }
+        }
+      },
+      {
+        "name": "zipcode",
+        "description": "Fetches location information based on a given ZIP code using the ToolBench RapidAPI.",
+        "parameters": {
+          "zipcode": {
+            "description": "The ZIP code for which to fetch location information.",
+            "type": "str",
+            "default": "95124"
+          }
+        }
+      },
+      {
+        "name": "ar_by_city_state",
+        "description": "Fetches augmented reality (AR) data for a given city and state using the Toolbench RapidAPI.",
+        "parameters": {
+          "city": {
+            "description": "The name of the city for which AR data is requested.",
+            "type": "str",
+            "default": "San Diego"
+          },
+          "state": {
+            "description": "The name of the state for which AR data is requested.",
+            "type": "str",
+            "default": "CA"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "models",
+        "arguments": {
+          "year": "2010",
+          "make": "Toyota",
+          "limit": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": 39455,
+    "query": "Search for poems that contain the line 'Once upon a midnight dreary, while I pondered weak and weary.'",
+    "tools": [
+      {
+        "name": "lines_line_abs",
+        "description": "Fetches poems that contain a specific line using the Thundercomb Poetry DB API.",
+        "parameters": {
+          "line": {
+            "description": "The exact line to search for in poems.",
+            "type": "str",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "lines_line_abs",
+        "arguments": {
+          "line": "Once upon a midnight dreary, while I pondered weak and weary."
+        }
+      }
+    ]
+  },
+  {
+    "id": 57141,
+    "query": "Find the address corresponding to the coordinates (40.7128, -74.0060) and fetch the first 10 records of type 'task'.",
+    "tools": [
+      {
+        "name": "reverse_geocode",
+        "description": "This function takes longitude and latitude coordinates and returns the corresponding address by making a reverse geocoding API request.",
+        "parameters": {
+          "lng": {
+            "description": "The longitude coordinate.",
+            "type": "int",
+            "default": "-123.0470199"
+          },
+          "lat": {
+            "description": "The latitude coordinate.",
+            "type": "int",
+            "default": "49.2813458"
+          }
+        }
+      },
+      {
+        "name": "fetch_by_type",
+        "description": "Fetches records from the RapidAPI endpoint based on the specified type and limit.",
+        "parameters": {
+          "type": {
+            "description": "The type of records to fetch. Refer to the API documentation for accepted types.",
+            "type": "str",
+            "default": "Forest"
+          },
+          "limit": {
+            "description": "The number of records to fetch.",
+            "type": "int",
+            "default": "5"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "reverse_geocode",
+        "arguments": {
+          "lng": -74.006,
+          "lat": 40.7128
+        }
+      },
+      {
+        "name": "fetch_by_type",
+        "arguments": {
+          "type": "task",
+          "limit": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": 9019,
+    "query": "What will $9000 become after 14 years at a 6.5% annual interest rate?",
+    "tools": [
+      {
+        "name": "calculate_investment_return",
+        "description": "Calculates the return on investment based on the initial deposit amount, annual interest rate, and investment period.",
+        "parameters": {
+          "initial_amount": {
+            "description": "The initial deposit amount.",
+            "type": "int"
+          },
+          "interest_rate": {
+            "description": "The annual interest rate provided by the bank.",
+            "type": "float"
+          },
+          "num_years": {
+            "description": "The number of years the money is invested.",
+            "type": "int"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "calculate_investment_return",
+        "arguments": {
+          "initial_amount": 9000,
+          "interest_rate": 0.065,
+          "num_years": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": 12070,
+    "query": "What is the WHOIS record for wikipedia.org and how fast does nytimes.com load?",
+    "tools": [
+      {
+        "name": "v1_whois",
+        "description": "Fetches the WHOIS information for a given domain using the API Ninjas Whois API.",
+        "parameters": {
+          "domain": {
+            "description": "The domain to retrieve WHOIS information for.",
+            "type": "str",
+            "default": "example.com"
+          }
+        }
+      },
+      {
+        "name": "getpagespeed",
+        "description": "Fetch the page or website loading speed for a given URL using the RapidAPI service.",
+        "parameters": {
+          "url": {
+            "description": "The URL of the page or website to check the loading speed.",
+            "type": "str",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "v1_whois",
+        "arguments": {
+          "domain": "wikipedia.org"
+        }
+      },
+      {
+        "name": "getpagespeed",
+        "arguments": {
+          "url": "nytimes.com"
+        }
+      }
+    ]
+  },
+  {
+    "id": 20455,
+    "query": "Is 153 an Armstrong number?",
+    "tools": [
+      {
+        "name": "binary_search",
+        "description": "Performs binary search on a sorted list to find the index of a target value.",
+        "parameters": {
+          "arr": {
+            "description": "The sorted list of integers.",
+            "type": "List[int]"
+          },
+          "target": {
+            "description": "The target value to search for.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "is_palindrome",
+        "description": "Checks if a string is a palindrome.",
+        "parameters": {
+          "text": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "reverse_string",
+        "description": "Reverses the characters in a string.",
+        "parameters": {
+          "text": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "count_vowels",
+        "description": "Counts the number of vowels in a given text.",
+        "parameters": {
+          "text": {
+            "description": "The input text.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "is_armstrong_number",
+        "description": "Checks if a number is an Armstrong number.",
+        "parameters": {
+          "num": {
+            "description": "The number to check.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "word_frequency",
+        "description": "Calculates the frequency of each word in a text.",
+        "parameters": {
+          "text": {
+            "description": "The input text.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "merge_dictionaries",
+        "description": "Merges two dictionaries into a single dictionary.",
+        "parameters": {
+          "dict1": {
+            "description": "The first dictionary.",
+            "type": "Dict"
+          },
+          "dict2": {
+            "description": "The second dictionary.",
+            "type": "Dict"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "is_armstrong_number",
+        "arguments": {
+          "num": 153
+        }
+      }
+    ]
+  },
+  {
+    "id": 10726,
+    "query": "Fetch related hashtags for 'travel' and 'fitness' using the Hashtag API.",
+    "tools": [
+      {
+        "name": "genderify_v3",
+        "description": "Predict and detect the gender (male or female) based on the given name or email address using the Genderify API. Names are supported in over 160 countries.",
+        "parameters": {
+          "text": {
+            "description": "The name or email address to analyze for gender prediction.",
+            "type": "str",
+            "default": "ayumihamasaki@gmail.com"
+          }
+        }
+      },
+      {
+        "name": "similar_hashtags",
+        "description": "Fetches related hashtags for a given keyword using the Hashtag API.",
+        "parameters": {
+          "keyword": {
+            "description": "The keyword for which related hashtags are to be fetched.",
+            "type": "str",
+            "default": "insta"
+          }
+        }
+      },
+      {
+        "name": "real_time_user_search",
+        "description": "Perform a real-time search for social media influencers based on a given keyword.",
+        "parameters": {
+          "keyword": {
+            "description": "The search keyword. For example: 'amazon'.",
+            "type": "str",
+            "default": "amazon"
+          },
+          "skip": {
+            "description": "The number of records to skip in the search results. Useful for paginating results.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "limit": {
+            "description": "The maximum number of records to return. Default is 30, and the maximum allowed value is 30.",
+            "type": "int, optional",
+            "default": "30"
+          }
+        }
+      },
+      {
+        "name": "generate_a_face",
+        "description": "Generates a face image using an AI service and returns the result as a JSON object or text. It utilizes the Toolbench RapidAPI service.",
+        "parameters": {
+          "ai": {
+            "description": "The AI model identifier to be used for face generation.",
+            "type": "str",
+            "default": "1"
+          }
+        }
+      },
+      {
+        "name": "v1_post_post_id_comments",
+        "description": "Fetch comments for a given post ID from the Tokapi mobile API.",
+        "parameters": {
+          "post_id": {
+            "description": "The ID of the post for which to fetch comments.",
+            "type": "str",
+            "default": "6977747303692078337"
+          },
+          "count": {
+            "description": "The number of comments to retrieve. Defaults to 10.",
+            "type": "int, optional",
+            "default": 10
+          },
+          "offset": {
+            "description": "The offset for fetching comments, used for pagination. Defaults to 0.",
+            "type": "int, optional",
+            "default": 0
+          }
+        }
+      },
+      {
+        "name": "get_greet",
+        "description": "Generates a greeting message based on the provided name and cringe level, using the RapidAPI greet generator.",
+        "parameters": {
+          "name": {
+            "description": "The name to be included in the greeting.",
+            "type": "str",
+            "default": "Amir"
+          },
+          "cringelevel": {
+            "description": "The level of cringiness for the greeting.",
+            "type": "str",
+            "default": "5"
+          }
+        }
+      },
+      {
+        "name": "song_download",
+        "description": "Downloads a song from the provided SoundCloud URL using the specified RapidAPI key.",
+        "parameters": {
+          "track_url": {
+            "description": "The URL of the SoundCloud track to be downloaded.",
+            "type": "str",
+            "default": "https://soundcloud.com/user-977421934/the-phoenix"
+          }
+        }
+      },
+      {
+        "name": "popular_posts",
+        "description": "Fetches popular posts from Reddit based on the given sort type.",
+        "parameters": {
+          "sort": {
+            "description": "The sorting method for the posts. Accepted values are 'new' and 'hot'.",
+            "type": "str",
+            "default": "new"
+          },
+          "cursor": {
+            "description": "An optional cursor for pagination to fetch the next set of results. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "similar_hashtags",
+        "arguments": {
+          "keyword": "travel"
+        }
+      },
+      {
+        "name": "similar_hashtags",
+        "arguments": {
+          "keyword": "fitness"
+        }
+      }
+    ]
+  },
+  {
+    "id": 19785,
+    "query": "Could you compare the gas prices in Alberta, British Columbia, and Manitoba?",
+    "tools": [
+      {
+        "name": "province",
+        "description": "Fetches the average price of gas in a specific province in Canada using the Canadian Gas Prices API.",
+        "parameters": {
+          "province": {
+            "description": "A valid province name in Canada. Options include Ontario, Quebec, Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Prince Edward Island, Saskatchewan.",
+            "type": "str",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "province",
+        "arguments": {
+          "province": "Alberta"
+        }
+      },
+      {
+        "name": "province",
+        "arguments": {
+          "province": "British Columbia"
+        }
+      },
+      {
+        "name": "province",
+        "arguments": {
+          "province": "Manitoba"
+        }
+      }
+    ]
+  },
+  {
+    "id": 26873,
+    "query": "Calculate the duration between a 440 Hz note and a 523 Hz note at a tempo of 100 BPM, and sort the numbers [3.5, 1.2, 2.7, 4.1] in descending order.",
+    "tools": [
+      {
+        "name": "note_duration",
+        "description": "Calculates the duration between two musical notes based on their frequencies and the tempo.",
+        "parameters": {
+          "freq1": {
+            "description": "The frequency of the first note in Hz.",
+            "type": "int",
+            "default": 120
+          },
+          "freq2": {
+            "description": "The frequency of the second note in Hz.",
+            "type": "int",
+            "default": 120
+          },
+          "bpm": {
+            "description": "The tempo of the music in beats per minute. Defaults to 120.",
+            "type": "int, optional"
+          }
+        }
+      },
+      {
+        "name": "sort_numbers",
+        "description": "Sorts a list of numbers in ascending or descending order.",
+        "parameters": {
+          "numbers": {
+            "description": "The list of numbers to be sorted.",
+            "type": "List[float]"
+          },
+          "descending": {
+            "description": "If True, sorts the numbers in descending order. Defaults to False.",
+            "type": "bool, optional"
+          }
+        }
+      },
+      {
+        "name": "is_power_of_two",
+        "description": "Checks if a number is a power of two.",
+        "parameters": {
+          "num": {
+            "description": "The number to check.",
+            "type": "int"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "note_duration",
+        "arguments": {
+          "freq1": 440,
+          "freq2": 523,
+          "bpm": 100
+        }
+      },
+      {
+        "name": "sort_numbers",
+        "arguments": {
+          "numbers": [
+            3.5,
+            1.2,
+            2.7,
+            4.1
+          ],
+          "descending": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 12430,
+    "query": "Generate a password of length 15 that includes special characters.",
+    "tools": [
+      {
+        "name": "generate_random_string",
+        "description": "Generates a random string of specified length and character types.",
+        "parameters": {
+          "length": {
+            "description": "The length of the random string.",
+            "type": "int",
+            "default": true
+          },
+          "uppercase": {
+            "description": "Include uppercase letters. Defaults to True.",
+            "type": "bool, optional",
+            "default": true
+          },
+          "lowercase": {
+            "description": "Include lowercase letters. Defaults to True.",
+            "type": "bool, optional",
+            "default": true
+          },
+          "digits": {
+            "description": "Include digits. Defaults to True.",
+            "type": "bool, optional"
+          },
+          "special_chars": {
+            "description": "Include special characters. Defaults to False.",
+            "type": "bool, optional",
+            "default": true
+          }
+        }
+      },
+      {
+        "name": "find_max_subarray_sum",
+        "description": "Finds the maximum sum of a contiguous subarray within a list of integers.",
+        "parameters": {
+          "nums": {
+            "description": "The input list of integers.",
+            "type": "List[int]"
+          }
+        }
+      },
+      {
+        "name": "find_missing_ranges",
+        "description": "Finds the missing ranges between lower and upper in a sorted list of integers.",
+        "parameters": {
+          "nums": {
+            "description": "The sorted list of integers.",
+            "type": "List[int]"
+          },
+          "lower": {
+            "description": "The lower bound.",
+            "type": "int"
+          },
+          "upper": {
+            "description": "The upper bound.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "binary_search",
+        "description": "Performs binary search on a sorted list to find the index of a target value.",
+        "parameters": {
+          "arr": {
+            "description": "The sorted list of integers.",
+            "type": "List[int]"
+          },
+          "target": {
+            "description": "The target value to search for.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "generate_password",
+        "description": "Generates a random password of specified length and character types.",
+        "parameters": {
+          "length": {
+            "description": "The length of the password. Defaults to 12.",
+            "type": "int, optional",
+            "default": 12
+          },
+          "include_special": {
+            "description": "Whether to include special characters in the password. Defaults to True.",
+            "type": "bool, optional",
+            "default": true
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "generate_password",
+        "arguments": {
+          "length": 15,
+          "include_special": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 53881,
+    "query": "Retrieve the bus detour information for route 17 and the webcams in Europe showing images and location, localized in German.",
+    "tools": [
+      {
+        "name": "bus_detours",
+        "description": "Fetches the bus detours from the SEPTA API based on the specified route number.",
+        "parameters": {
+          "req1": {
+            "description": "The route number for which to retrieve detour information. Defaults to 2.",
+            "type": "int, optional",
+            "default": "2"
+          }
+        }
+      },
+      {
+        "name": "webcams_list_continent_continent_continent",
+        "description": "Fetches a list of webcams for a specified continent.",
+        "parameters": {
+          "continent": {
+            "description": "Continent code for which to fetch webcams. Possible values are:",
+            "type": "str",
+            "default": ""
+          },
+          "lang": {
+            "description": "Language code to localize the results, if available. Default is 'en'.",
+            "type": "str, optional",
+            "default": "en"
+          },
+          "show": {
+            "description": "Content to be listed in the response. Possible values are:",
+            "type": "str, optional",
+            "default": "webcams:image,location"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "bus_detours",
+        "arguments": {
+          "req1": 17
+        }
+      },
+      {
+        "name": "webcams_list_continent_continent_continent",
+        "arguments": {
+          "continent": "EU",
+          "lang": "de",
+          "show": "webcams:image,location"
+        }
+      }
+    ]
+  },
+  {
+    "id": 29040,
+    "query": "Make a QR code for the Wi-Fi network 'MyNetwork' with password 'mypass123'.",
+    "tools": [
+      {
+        "name": "inn_general_director",
+        "description": "Retrieves the general director information of a company based on its INN (tax identification number) using the Toolbench RapidAPI.",
+        "parameters": {
+          "inn": {
+            "description": "The INN number of the company.",
+            "type": "str",
+            "default": "7736050003"
+          }
+        }
+      },
+      {
+        "name": "qrcode",
+        "description": "Generates a QR code from the provided text using the QR Code API.",
+        "parameters": {
+          "text": {
+            "description": "The input text to be converted into a QR code.",
+            "type": "str",
+            "default": "https://google.com"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "qrcode",
+        "arguments": {
+          "text": "WIFI:S:MyNetwork;T:WPA;P:mypass123;;"
+        }
+      }
+    ]
+  },
+  {
+    "id": 23322,
+    "query": "What are the search results for 'productivity apps' in English and Spanish in the US and Spain?",
+    "tools": [
+      {
+        "name": "search",
+        "description": "Search for apps on the Store using various query parameters.",
+        "parameters": {
+          "q": {
+            "description": "The search query for finding apps.",
+            "type": "str",
+            "default": "notes"
+          },
+          "language": {
+            "description": "The language to use for the search, specified as a 2-letter ISO 639-1 code. Defaults to 'en'.",
+            "type": "str, optional",
+            "default": "en"
+          },
+          "cursor": {
+            "description": "A cursor from the previous request to get the next set of results. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "region": {
+            "description": "The 2-letter ISO 3166-1 country code for the region to search in. Defaults to 'us'.",
+            "type": "str, optional",
+            "default": "us"
+          }
+        }
+      },
+      {
+        "name": "ublacklist_txt",
+        "description": "Fetches the ublacklist.txt data for a specified game using the StopModReposts API.",
+        "parameters": {
+          "game": {
+            "description": "The name of the game to fetch the blacklist for. Defaults to 'minecraft'.",
+            "type": "str",
+            "default": "minecraft"
+          }
+        }
+      },
+      {
+        "name": "txt",
+        "description": "Fetches a plain text blocklist of sites for a specified game using the StopModReposts API.",
+        "parameters": {
+          "game": {
+            "description": "The name of the game for which to fetch the blocklist. Defaults to 'minecraft'.",
+            "type": "str",
+            "default": "minecraft"
+          }
+        }
+      },
+      {
+        "name": "trend_id",
+        "description": "Fetches trending topics from Twitter based on a given \"Where On Earth IDentifier\" (WOEID) using the Toolbench RapidAPI service.",
+        "parameters": {
+          "woeid": {
+            "description": "The Yahoo! Where On Earth IDentifier (WOEID) for which to get trending topics.",
+            "type": "int",
+            "default": 2514815
+          }
+        }
+      },
+      {
+        "name": "getgames",
+        "description": "Retrieves Diablo 4 game data from the specified page using RapidAPI.",
+        "parameters": {
+          "page": {
+            "description": "The page number of game data to retrieve.",
+            "type": "int",
+            "default": "1"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "search",
+        "arguments": {
+          "q": "productivity apps",
+          "language": "en",
+          "region": "us"
+        }
+      },
+      {
+        "name": "search",
+        "arguments": {
+          "q": "productivity apps",
+          "language": "en",
+          "region": "es"
+        }
+      },
+      {
+        "name": "search",
+        "arguments": {
+          "q": "productivity apps",
+          "language": "es",
+          "region": "us"
+        }
+      },
+      {
+        "name": "search",
+        "arguments": {
+          "q": "productivity apps",
+          "language": "es",
+          "region": "es"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5408,
+    "query": "Get details of the YouTube playlist with ID PL123456789 and include 'snippet,contentDetails'.",
+    "tools": [
+      {
+        "name": "block",
+        "description": "Fetches information about a specified Unicode block from the Codepoints API.",
+        "parameters": {
+          "block": {
+            "description": "The name of the Unicode block to retrieve information about.",
+            "type": "str",
+            "default": "basic_latin"
+          },
+          "callback": {
+            "description": "The JSON-P function name for the response. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      },
+      {
+        "name": "new_ios_apps",
+        "description": "Fetch a list of new iOS apps from the App Store using the RapidAPI service.",
+        "parameters": {
+          "country": {
+            "description": "The country code for the App Store. Defaults to 'us'.",
+            "type": "str, optional",
+            "default": "us"
+          },
+          "category": {
+            "description": "The category code for the type of apps. Defaults to '6016'.",
+            "type": "str, optional",
+            "default": "6016"
+          },
+          "lang": {
+            "description": "The language code for the App Store content. Defaults to 'en'.",
+            "type": "str, optional",
+            "default": "en"
+          },
+          "num": {
+            "description": "The number of results to return. Defaults to 100.",
+            "type": "int, optional",
+            "default": "100"
+          }
+        }
+      },
+      {
+        "name": "walk_transit_and_bike_scores",
+        "description": "Fetches Walk, Transit, and Bike Scores for a property using the given ZPID.",
+        "parameters": {
+          "zpid": {
+            "description": "The Zillow Property ID for which the scores are to be fetched. Default is '20485700'.",
+            "type": "str",
+            "default": "20485700"
+          }
+        }
+      },
+      {
+        "name": "estimate_market_value",
+        "description": "Estimates the market value of a car given its VIN and optionally its mileage using the Toolbench RapidAPI service.",
+        "parameters": {
+          "vin": {
+            "description": "The Vehicle Identification Number of the car.",
+            "type": "str",
+            "default": "5N3AA08D68N901917"
+          },
+          "mileage": {
+            "description": "The current mileage of the car. Defaults to 50,000 if not specified.",
+            "type": "int, optional",
+            "default": "50000"
+          }
+        }
+      },
+      {
+        "name": "playlist_details",
+        "description": "Fetches the details of a YouTube playlist based on the provided playlist ID and part specifications.",
+        "parameters": {
+          "is_id": {
+            "description": "The ID of the playlist to fetch details for.",
+            "type": "str",
+            "default": "RDZiQo7nAkQHU"
+          },
+          "part": {
+            "description": "The part parameter specifies a comma-separated list of one or more playlist resource properties that the API response will include.",
+            "type": "str",
+            "default": "snippet"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "playlist_details",
+        "arguments": {
+          "is_id": "PL123456789",
+          "part": "snippet,contentDetails"
+        }
+      }
+    ]
+  },
+  {
+    "id": 17178,
+    "query": "Get the Eredivisie standings for the current season.",
+    "tools": [
+      {
+        "name": "eredivisie_standings",
+        "description": "Fetches Eredivisie standings for a given season using the RapidAPI service.",
+        "parameters": {
+          "season": {
+            "description": "The season for which to fetch the standings, e.g., '2022'. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      },
+      {
+        "name": "stagedetails",
+        "description": "Fetch the details of a specific Motorsport stage using the provided stage ID.",
+        "parameters": {
+          "stageid": {
+            "description": "The ID of the Motorsport stage for which to retrieve the details.",
+            "type": "int",
+            "default": 203648
+          }
+        }
+      },
+      {
+        "name": "daily_match_list_scheduled",
+        "description": "Retrieves the list of scheduled basketball matches for a given date.",
+        "parameters": {
+          "date": {
+            "description": "The date for which to retrieve scheduled matches in the format 'dd/MM/yyyy'. Data can be retrieved for a period of \u00b1 7 days from the current date.",
+            "type": "str",
+            "default": "30/01/2021"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "eredivisie_standings",
+        "arguments": {}
+      }
+    ]
+  },
+  {
+    "id": 38539,
+    "query": "Get the details of the YouTube channels 'UC8butISFwT-Wl7EV0hUK0BQ' and 'UC-lHJZR3Gqxm24_Vd_AJ5Yw', and also provide the information about the domains 'google.com' and 'facebook.com'.",
+    "tools": [
+      {
+        "name": "channel_details",
+        "description": "Fetches details of a YouTube channel given its ID and desired parts using the RapidAPI service.",
+        "parameters": {
+          "is_id": {
+            "description": "The ID of the YouTube channel to fetch details for.",
+            "type": "str",
+            "default": "UCBVjMGOIkavEAhyqpxJ73Dw"
+          },
+          "part": {
+            "description": "The part parameter specifies a comma-separated list of one or more channel resource properties that the API response will include.",
+            "type": "str",
+            "default": "snippet,statistics"
+          }
+        }
+      },
+      {
+        "name": "whois",
+        "description": "Queries a WhoIS lookup service to retrieve data about a specified domain.",
+        "parameters": {
+          "domain": {
+            "description": "The domain name for the WhoIS lookup.",
+            "type": "str",
+            "default": "peekdomain.com"
+          }
+        }
+      },
+      {
+        "name": "top_paid_ipad_apps",
+        "description": "Gets a list of the top paid iPad apps from the specified category and country.",
+        "parameters": {
+          "category": {
+            "description": "The App Store category for which to fetch the top paid iPad apps. Defaults to '6016'.",
+            "type": "str, optional",
+            "default": "6016"
+          },
+          "country": {
+            "description": "The country code for which to fetch the top paid iPad apps. Defaults to 'us'.",
+            "type": "str, optional",
+            "default": "us"
+          },
+          "lang": {
+            "description": "The language code for the response. Defaults to 'en'.",
+            "type": "str, optional",
+            "default": "en"
+          },
+          "num": {
+            "description": "The number of results to return. Defaults to 100.",
+            "type": "int, optional",
+            "default": "100"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "channel_details",
+        "arguments": {
+          "is_id": "UC8butISFwT-Wl7EV0hUK0BQ",
+          "part": "snippet"
+        }
+      },
+      {
+        "name": "channel_details",
+        "arguments": {
+          "is_id": "UC-lHJZR3Gqxm24_Vd_AJ5Yw",
+          "part": "snippet"
+        }
+      },
+      {
+        "name": "whois",
+        "arguments": {
+          "domain": "google.com"
+        }
+      },
+      {
+        "name": "whois",
+        "arguments": {
+          "domain": "facebook.com"
+        }
+      }
+    ]
+  },
+  {
+    "id": 37358,
+    "query": "Can you fetch the info for the hashtag challenge named 'DanceChallenge2023'? I need it for my project.",
+    "tools": [
+      {
+        "name": "hashtag_data_by_name",
+        "description": "Fetches data for a specified TikTok hashtag using the given challenge name.",
+        "parameters": {
+          "challenge_name": {
+            "description": "The name of the TikTok hashtag challenge to retrieve data for.",
+            "type": "str",
+            "default": "food"
+          }
+        }
+      },
+      {
+        "name": "get_individual_result_by_id",
+        "description": "Fetches individual result data by a given ID from the Robbery Data API.",
+        "parameters": {
+          "is_id": {
+            "description": "The ID of the individual whose result data is to be fetched.",
+            "type": "str",
+            "default": "10"
+          }
+        }
+      },
+      {
+        "name": "profile",
+        "description": "Fetches and returns the profile information of a given Instagram user using the specified RapidAPI key.",
+        "parameters": {
+          "ig": {
+            "description": "The Instagram username for which the profile information is to be retrieved.",
+            "type": "str",
+            "default": "lelepons"
+          }
+        }
+      },
+      {
+        "name": "user_medias",
+        "description": "Fetches media posts for a specified Instagram user.",
+        "parameters": {
+          "user_id": {
+            "description": "The Instagram user ID for which to fetch media posts.",
+            "type": "str",
+            "default": "13460080"
+          },
+          "next_max_id": {
+            "description": "Pagination parameter for fetching the next set of media posts. Default is None.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "hashtag_data_by_name",
+        "arguments": {
+          "challenge_name": "DanceChallenge2023"
+        }
+      }
+    ]
+  },
+  {
+    "id": 54375,
+    "query": "Can you calculate the resistance of an aluminum wire that's 300 meters long with a cross-sectional area of 0.006 square meters? Also, how many years does it take for light to travel 25 light years?",
+    "tools": [
+      {
+        "name": "light_travel_time",
+        "description": "Calculate the time taken for light to travel from one celestial body to another.",
+        "parameters": {
+          "distance_in_light_years": {
+            "description": "The distance between the two celestial bodies in light years.",
+            "type": "int",
+            "default": 299792458
+          },
+          "speed_of_light": {
+            "description": "The speed of light in vacuum, in m/s. Default value is 299792458 m/s.",
+            "type": "int",
+            "default": 299792458
+          }
+        }
+      },
+      {
+        "name": "wire_resistance",
+        "description": "Calculates the resistance of a wire based on its length, cross-sectional area, and material resistivity.",
+        "parameters": {
+          "length_m": {
+            "description": "The length of the wire in meters.",
+            "type": "int",
+            "default": "copper"
+          },
+          "area_sq_m": {
+            "description": "The cross-sectional area of the wire in square meters.",
+            "type": "float",
+            "default": "copper"
+          },
+          "material": {
+            "description": "The material of the wire. Allowed values: \"copper\" (default) or \"aluminum\".",
+            "type": "str, optional"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "wire_resistance",
+        "arguments": {
+          "length_m": 300,
+          "area_sq_m": 0.006,
+          "material": "aluminum"
+        }
+      },
+      {
+        "name": "light_travel_time",
+        "arguments": {
+          "distance_in_light_years": 25,
+          "speed_of_light": 299792458
+        }
+      }
+    ]
+  },
+  {
+    "id": 12717,
+    "query": "What are the DNS records for apple.com and can you fetch the content from their support page?",
+    "tools": [
+      {
+        "name": "get_content",
+        "description": "Retrieves the content from the given URL using the RapidAPI service.",
+        "parameters": {
+          "url": {
+            "description": "The URL of the webpage from which to extract content.",
+            "type": "str",
+            "default": "https://www.cnbc.com/2022/06/27/three-arrows-capital-crypto-hedge-fund-defaults-on-voyager-loan.html"
+          }
+        }
+      },
+      {
+        "name": "dns",
+        "description": "Fetches DNS records for a given domain using the RapidAPI domain checker service.",
+        "parameters": {
+          "domain": {
+            "description": "The domain for which DNS records are to be retrieved.",
+            "type": "str",
+            "default": "rapidapi.com"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "dns",
+        "arguments": {
+          "domain": "apple.com"
+        }
+      },
+      {
+        "name": "get_content",
+        "arguments": {
+          "url": "https://support.apple.com"
+        }
+      }
+    ]
+  },
+  {
+    "id": 38932,
+    "query": "What are the car models offered by Tesla? What are the top suggestions for places near Palo Alto, California?",
+    "tools": [
+      {
+        "name": "get_car_models",
+        "description": "Fetches all car models for a specified car maker using the InfoCars API.",
+        "parameters": {
+          "maker": {
+            "description": "The name of the car maker to fetch the models for.",
+            "type": "str",
+            "default": "Bugatti"
+          }
+        }
+      },
+      {
+        "name": "autocomplete",
+        "description": "Fetches autocomplete suggestions for places, locations, and addresses using the Waze API.",
+        "parameters": {
+          "q": {
+            "description": "Free-text geographic query.",
+            "type": "str",
+            "default": "sunn"
+          },
+          "lang": {
+            "description": "The language of the results. Defaults to 'en'. Refer to https://wazeopedia.waze.com/wiki/USA/Countries_and_Languages for a list of supported languages.",
+            "type": "str, optional",
+            "default": "en"
+          },
+          "coordinates": {
+            "description": "Geographic coordinates (latitude, longitude) to bias the results. Defaults to '37.376754, -122.023350'. Recommended for getting accurate results.",
+            "type": "str, optional",
+            "default": "37.376754, -122.023350"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "get_car_models",
+        "arguments": {
+          "maker": "tesla"
+        }
+      },
+      {
+        "name": "autocomplete",
+        "arguments": {
+          "q": "palo alto, ca"
+        }
+      }
+    ]
+  },
+  {
+    "id": 43210,
+    "query": "What is the bacterial population after 90 minutes, given an initial population of 2000 bacteria, a growth rate of 0.1, and a doubling time of 40 minutes? Also, generate the first 30 Fibonacci numbers.",
+    "tools": [
+      {
+        "name": "bacterial_growth",
+        "description": "Calculates the bacterial population after a given time based on the initial population and growth rate.",
+        "parameters": {
+          "initial_population": {
+            "description": "The initial bacterial population.",
+            "type": "int",
+            "default": 20
+          },
+          "growth_rate": {
+            "description": "The growth rate per unit time.",
+            "type": "float",
+            "default": 20
+          },
+          "time": {
+            "description": "The time elapsed.",
+            "type": "float"
+          },
+          "doubling_time": {
+            "description": "The doubling time of the bacteria in minutes. Defaults to 20.",
+            "type": "float, optional"
+          }
+        }
+      },
+      {
+        "name": "fibonacci_numbers",
+        "description": "Generates the first n Fibonacci numbers.",
+        "parameters": {
+          "n": {
+            "description": "The number of Fibonacci numbers to generate.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "mean_confidence_interval",
+        "description": "Calculates the confidence interval for a sample mean.",
+        "parameters": {
+          "std_dev": {
+            "description": "The standard deviation of the sample.",
+            "type": "float",
+            "default": 0.95
+          },
+          "sample_size": {
+            "description": "The size of the sample.",
+            "type": "int",
+            "default": 0.95
+          },
+          "mean": {
+            "description": "The mean of the sample.",
+            "type": "float"
+          },
+          "confidence": {
+            "description": "The desired confidence level. Default is 0.95.",
+            "type": "float, optional"
+          }
+        }
+      },
+      {
+        "name": "find_peak_element",
+        "description": "Finds a peak element in a list of integers.",
+        "parameters": {
+          "nums": {
+            "description": "The list of integers.",
+            "type": "List[int]"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "bacterial_growth",
+        "arguments": {
+          "initial_population": 2000,
+          "growth_rate": 0.1,
+          "time": 90,
+          "doubling_time": 40
+        }
+      },
+      {
+        "name": "fibonacci_numbers",
+        "arguments": {
+          "n": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": 26351,
+    "query": "List all available cryptocurrency symbols.",
+    "tools": [
+      {
+        "name": "type_parent_get_recent_investment_rating_change",
+        "description": "Fetches the recent investment rating change as displayed in the Parent tab for a given security.",
+        "parameters": {
+          "type": {
+            "description": "The type of security, either 'etf' or 'fund'.",
+            "type": "str",
+            "default": "etf"
+          },
+          "securityid": {
+            "description": "The security ID used to query the investment rating change.",
+            "type": "str",
+            "default": "F00000O2CG"
+          }
+        }
+      },
+      {
+        "name": "estimates",
+        "description": "Retrieves estimates for a specified stock symbol using the Holistic Finance API.",
+        "parameters": {
+          "symbol": {
+            "description": "The stock symbol for which to retrieve estimates.",
+            "type": "str",
+            "default": "AAPL"
+          }
+        }
+      },
+      {
+        "name": "crypto_symbols",
+        "description": "Returns a list of all available cryptocurrencies from the RapidAPI service.",
+        "parameters": {
+          "includenames": {
+            "description": "If True, include cryptocurrency names in the response. Defaults to None.",
+            "type": "bool, optional",
+            "default": "true"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "crypto_symbols",
+        "arguments": {}
+      }
+    ]
+  },
+  {
+    "id": 46019,
+    "query": "Find all .jpg files in the directory '/home/user/pictures'. Also, find the first non-repeating character in the string 'racecar'.",
+    "tools": [
+      {
+        "name": "find_missing_ranges",
+        "description": "Finds the missing ranges between lower and upper in a sorted list of integers.",
+        "parameters": {
+          "nums": {
+            "description": "The sorted list of integers.",
+            "type": "List[int]"
+          },
+          "lower": {
+            "description": "The lower bound.",
+            "type": "int"
+          },
+          "upper": {
+            "description": "The upper bound.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "binary_search",
+        "description": "Performs binary search on a sorted list to find the index of a target value.",
+        "parameters": {
+          "arr": {
+            "description": "The sorted list of integers.",
+            "type": "List[int]"
+          },
+          "target": {
+            "description": "The target value to search for.",
+            "type": "int"
+          }
+        }
+      },
+      {
+        "name": "find_max_subarray_sum",
+        "description": "Finds the maximum sum of a contiguous subarray within a list of integers.",
+        "parameters": {
+          "nums": {
+            "description": "The input list of integers.",
+            "type": "List[int]"
+          }
+        }
+      },
+      {
+        "name": "is_palindrome",
+        "description": "Checks if a string is a palindrome.",
+        "parameters": {
+          "text": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "find_files",
+        "description": "Finds all files with a specific extension in a directory and its subdirectories.",
+        "parameters": {
+          "directory": {
+            "description": "The directory to search in.",
+            "type": "str"
+          },
+          "extension": {
+            "description": "The file extension to search for.",
+            "type": "str"
+          }
+        }
+      },
+      {
+        "name": "find_first_non_repeating_char",
+        "description": "Finds the first non-repeating character in a string.",
+        "parameters": {
+          "s": {
+            "description": "The input string.",
+            "type": "str"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "find_files",
+        "arguments": {
+          "directory": "/home/user/pictures",
+          "extension": ".jpg"
+        }
+      },
+      {
+        "name": "find_first_non_repeating_char",
+        "arguments": {
+          "s": "racecar"
+        }
+      }
+    ]
+  },
+  {
+    "id": 30334,
+    "query": "Update the financial records with the transaction details: transaction ID 'T1234', amount '1000.00', and currency 'USD'.",
+    "tools": [
+      {
+        "name": "update",
+        "description": "Updates data on a specified endpoint using the provided information and RapidAPI key.",
+        "parameters": {
+          "info3": {
+            "description": "The third piece of information to be sent as a query parameter.",
+            "type": "str",
+            "default": "333"
+          },
+          "info1": {
+            "description": "The first piece of information to be sent as a query parameter.",
+            "type": "str",
+            "default": "111"
+          },
+          "info2": {
+            "description": "The second piece of information to be sent as a query parameter.",
+            "type": "str",
+            "default": "222"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "update",
+        "arguments": {
+          "info3": "USD",
+          "info1": "T1234",
+          "info2": "1000.00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 25891,
+    "query": "I'm curious about the music trends in Australia on Spotify, could you possibly look that up?",
+    "tools": [
+      {
+        "name": "get_home_page_overview",
+        "description": "Fetches trending information displayed on the Spotify home page as an incognito visitor.",
+        "parameters": {
+          "region": {
+            "description": "Region code (ISO 3166 alpha-2) for localized results. Defaults to `None`, which will fallback to `US` if unsupported.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "get_home_page_overview",
+        "arguments": {
+          "region": "AU"
+        }
+      }
+    ]
+  },
+  {
+    "id": 16788,
+    "query": "I need to know the holidays in S\u00e3o Paulo state for the year 2022. Additionally, what are the non-working days in the USA for the same year?",
+    "tools": [
+      {
+        "name": "get_1_3_list_non_working_days",
+        "description": "Fetch the non-working days (weekend days, public holidays, and custom dates) between two specified dates for a given country.",
+        "parameters": {
+          "start_date": {
+            "description": "The start date in the format 'YYYY-MM-DD'.",
+            "type": "str",
+            "default": "2013-01-01"
+          },
+          "end_date": {
+            "description": "The end date in the format 'YYYY-MM-DD'.",
+            "type": "str",
+            "default": "2013-12-31"
+          },
+          "country_code": {
+            "description": "The ISO country code (2 letters). See available countries & configurations.",
+            "type": "str",
+            "default": "US"
+          },
+          "configuration": {
+            "description": "The name of the preset configuration to be used. Defaults to 'Federal holidays'.",
+            "type": "str, optional",
+            "default": "Federal holidays"
+          },
+          "profile_id": {
+            "description": "Custom profile ID for the request. Defaults to None.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      },
+      {
+        "name": "get_hebrew_month",
+        "description": "Fetches the Hebrew month for a given Gregorian date string using the Enoch Calendar API.",
+        "parameters": {
+          "datestring": {
+            "description": "The Gregorian date in 'YYYY-MM-DD' format for which to get the Hebrew month.",
+            "type": "str",
+            "default": "2021-03-17"
+          }
+        }
+      },
+      {
+        "name": "feriados_dos_estados",
+        "description": "Retrieves the holidays for a given Brazilian state and year.",
+        "parameters": {
+          "estado": {
+            "description": "Abbreviation of the Brazilian state in uppercase letters.",
+            "type": "str",
+            "default": "MG"
+          },
+          "ano": {
+            "description": "Year for which to retrieve the holidays.",
+            "type": "str",
+            "default": "2023"
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "feriados_dos_estados",
+        "arguments": {
+          "estado": "SP",
+          "ano": "2022"
+        }
+      },
+      {
+        "name": "get_1_3_list_non_working_days",
+        "arguments": {
+          "start_date": "2022-01-01",
+          "end_date": "2022-12-31",
+          "country_code": "US"
+        }
+      }
+    ]
+  },
+  {
+    "id": 44895,
+    "query": "What are the trending topics on Twitter in London, and retrieve data for the company with LinkedIn URL 'https://www.linkedin.com/company/google/'?",
+    "tools": [
+      {
+        "name": "trend_id",
+        "description": "Fetches trending topics from Twitter based on a given \"Where On Earth IDentifier\" (WOEID) using the Toolbench RapidAPI service.",
+        "parameters": {
+          "woeid": {
+            "description": "The Yahoo! Where On Earth IDentifier (WOEID) for which to get trending topics.",
+            "type": "int",
+            "default": 2514815
+          }
+        }
+      },
+      {
+        "name": "get_company_data_by_linkedin_url",
+        "description": "Fetch company data using a given LinkedIn URL via the ToolBench RapidAPI.",
+        "parameters": {
+          "linkedin_url": {
+            "description": "The LinkedIn URL of the company to retrieve data for.",
+            "type": "str",
+            "default": "https://www.linkedin.com/company/apple/"
+          }
+        }
+      },
+      {
+        "name": "draw_date_listing",
+        "description": "Fetches a listing of Thai lottery draw dates from the RapidAPI service.",
+        "parameters": {
+          "page": {
+            "description": "The page number of the results to fetch. Defaults to 1.",
+            "type": "int, optional",
+            "default": "1"
+          }
+        }
+      },
+      {
+        "name": "retrieving_assets",
+        "description": "Retrieve a list of assets from the OpenSea API with various filter parameters.",
+        "parameters": {
+          "owner": {
+            "description": "The wallet address of the owner of the assets. Default is None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "order_direction": {
+            "description": "The order of the results. Can be 'asc' or 'desc'. Default is 'desc'.",
+            "type": "str, optional",
+            "default": "desc"
+          },
+          "asset_contract_address": {
+            "description": "The contract address for the assets. Default is None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "limit": {
+            "description": "The number of assets to return. Default is 20.",
+            "type": "int, optional",
+            "default": "20"
+          },
+          "collection_slug": {
+            "description": "The collection slug to filter assets. Default is None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "cursor": {
+            "description": "A cursor to paginate results. Default is None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "token_ids": {
+            "description": "Specific token IDs to filter assets. Default is None.",
+            "type": "int, optional",
+            "default": ""
+          },
+          "asset_contract_addresses": {
+            "description": "Specific contract addresses to filter assets. Default is None.",
+            "type": "str, optional",
+            "default": ""
+          },
+          "collection": {
+            "description": "The collection name to filter assets. Default is 'ongakucraft'.",
+            "type": "str, optional",
+            "default": "ongakucraft"
+          },
+          "include_orders": {
+            "description": "Whether to include order information for the assets. Default is None.",
+            "type": "bool, optional",
+            "default": ""
+          },
+          "collection_editor": {
+            "description": "The editor of the collection to filter assets. Default is None.",
+            "type": "str, optional",
+            "default": ""
+          }
+        }
+      }
+    ],
+    "answers": [
+      {
+        "name": "trend_id",
+        "arguments": {
+          "woeid": 44418
+        }
+      },
+      {
+        "name": "get_company_data_by_linkedin_url",
+        "arguments": {
+          "linkedin_url": "https://www.linkedin.com/company/google/"
+        }
+      }
+    ]
+  }
+]

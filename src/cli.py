@@ -1,13 +1,19 @@
 """CLI entry point for finetune-vs-prompt-bench."""
 
-import typer
+import os
 
+import typer
+from dotenv import load_dotenv
+
+from src.curation import curate as curate_dataset
+
+load_dotenv()
 app=typer.Typer()
 
 @app.command()
 def curate():
     """Sample and verify a subset of the function-calling dataset."""
-    typer.echo("curate: not implemented yet")
+    curate_dataset(hf_token=os.environ.get("HF_TOKEN"))
 
 
 @app.command()
